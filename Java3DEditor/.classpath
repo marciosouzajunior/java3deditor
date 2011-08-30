@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="src/br/com/java3deditor/libs/grid.jar"/>
+	<classpathentry kind="lib" path="src/br/com/java3deditor/libs/j3dcore.jar"/>
+	<classpathentry kind="lib" path="src/br/com/java3deditor/libs/j3dutils.jar"/>
+	<classpathentry kind="lib" path="src/br/com/java3deditor/libs/vecmath.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
