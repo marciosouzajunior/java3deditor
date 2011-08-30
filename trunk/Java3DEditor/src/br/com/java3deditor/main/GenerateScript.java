@@ -476,5 +476,21 @@ public class GenerateScript {
 		"}";
 			
 	}
+	/**
+	 * Return the string with the first letter upper case and the rest lower case.
+	 * 
+	 * @param word	String to be converted
+	 */
+    private static String fcase( String word ) {
+    	
+        if( word != null ) {
+            int len = word.length();
+            String out = "";
+            out += word.substring(0, 1).toUpperCase();
+            out += word.substring(1, len).toLowerCase();
+            return out;
+        }
+        return word;
+    }	
 		
 }
