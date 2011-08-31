@@ -848,22 +848,20 @@ public class Main extends JFrame {
 	public static void main(String[] args) {
 		
 		try {
+			
 			new Main().setVisible(true);
 			// new Splash();
+			
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getClass() + ": "
 					+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 			
-					 StringWriter sw = new StringWriter();  
-			         PrintWriter pw = new PrintWriter (sw);  
-			         e.printStackTrace (pw);  
-
-
-						JOptionPane.showMessageDialog(null, sw.toString(), "An error occurred", JOptionPane.ERROR_MESSAGE);		         
+			StringWriter sw = new StringWriter();  
+			PrintWriter pw = new PrintWriter (sw);  
+			e.printStackTrace (pw);  
+			JOptionPane.showMessageDialog(null, sw.toString(), "Stack Trace", JOptionPane.ERROR_MESSAGE);		         
 			         
-			         
-			         
-			         System.exit(1);
+			System.exit(1);
 		}
 
 	}
