@@ -31,28 +31,28 @@ public class CJToolBar {
     	toolBar.setFloatable(false);
     	toolBar.setOrientation(JToolBar.VERTICAL);
 		
-        final ImageIcon iconCube = new ImageIcon(getClass().getResource("../icons/cube.png"));
+        final ImageIcon iconCube = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/cube.png"));
         iconCube.setImage(iconCube.getImage().getScaledInstance(32, 32, 1));
         
-        final ImageIcon iconCone = new ImageIcon(getClass().getResource("../icons/cone.png"));
+        final ImageIcon iconCone = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/cone.png"));
         iconCone.setImage(iconCone.getImage().getScaledInstance(32, 32, 1));
         
-        final ImageIcon iconCylinder = new ImageIcon(getClass().getResource("../icons/cylinder.png"));
+        final ImageIcon iconCylinder = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/cylinder.png"));
         iconCylinder.setImage(iconCylinder.getImage().getScaledInstance(32, 32, 1));
         
-        final ImageIcon iconSphere = new ImageIcon(getClass().getResource("../icons/sphere.png"));
+        final ImageIcon iconSphere = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/sphere.png"));
         iconSphere.setImage(iconSphere.getImage().getScaledInstance(32, 32, 1));
    
-        final ImageIcon iconDelete = new ImageIcon(getClass().getResource("../icons/delete.png"));
+        final ImageIcon iconDelete = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/delete.png"));
         iconDelete.setImage(iconDelete.getImage().getScaledInstance(32, 32, 1));
         
-        final ImageIcon iconChangeColor = new ImageIcon(getClass().getResource("../icons/changecolor.png"));
+        final ImageIcon iconChangeColor = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/changecolor.png"));
         iconChangeColor.setImage(iconChangeColor.getImage().getScaledInstance(32, 32, 1));
         
-        final ImageIcon iconClone = new ImageIcon(getClass().getResource("../icons/clone.png"));
+        final ImageIcon iconClone = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/clone.png"));
         iconClone.setImage(iconClone.getImage().getScaledInstance(32, 32, 1));
         
-        final ImageIcon iconResetView = new ImageIcon(getClass().getResource("../icons/resetview.png"));
+        final ImageIcon iconResetView = new ImageIcon(getClass().getClassLoader().getResource("br/com/java3deditor/icons/resetview.png"));
         iconResetView.setImage(iconResetView.getImage().getScaledInstance(32, 32, 1));
 
         btCube = new JButton(iconCube);
