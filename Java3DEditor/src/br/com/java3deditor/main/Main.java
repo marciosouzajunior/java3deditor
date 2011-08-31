@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
@@ -46,8 +48,6 @@ import com.sun.j3d.utils.picking.PickResult;
 public class Main extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-
-	private static Main main;
 
 	// Take a toolkit to set the window size and position of InternalFrames
 	private static Toolkit tool = Toolkit.getDefaultToolkit();
@@ -336,9 +336,8 @@ public class Main extends JFrame {
 							.showInputDialog(null, "Enter the motion factor:",
 									"0.01"));
 				} catch (Exception e) {
-					JOptionPane.showMessageDialog(null, "An error occurred: "
-							+ e.getMessage(), "Error",
-							JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, e.getClass() + ": "
+							+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -404,9 +403,8 @@ public class Main extends JFrame {
 					}
 
 				} catch (Exception e) {
-					JOptionPane.showMessageDialog(null, "An error occurred: "
-							+ e.getMessage(), "Error",
-							JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, e.getClass() + ": "
+							+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 				}
 
 			} else {
@@ -683,8 +681,8 @@ public class Main extends JFrame {
 				scene.addBox(x / 100, y / 100, z / 100, color, name);
 
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "An error occurred: "
-						+ e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, e.getClass() + ": "
+						+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
@@ -729,8 +727,8 @@ public class Main extends JFrame {
 				scene.addSphere(raio / 100, color, name);
 
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "An error occurred: "
-						+ e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, e.getClass() + ": "
+						+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
@@ -777,8 +775,8 @@ public class Main extends JFrame {
 				scene.addCylinder(raio / 100, altura / 100, color, name);
 
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "An error occurred: "
-						+ e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, e.getClass() + ": "
+						+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
@@ -825,8 +823,8 @@ public class Main extends JFrame {
 				scene.addCone(raio / 100, altura / 100, color, name);
 
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "An error occurred: "
-						+ e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, e.getClass() + ": "
+						+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
@@ -848,10 +846,25 @@ public class Main extends JFrame {
 	}
 
 	public static void main(String[] args) {
+		
+		try {
+			new Main().setVisible(true);
+			// new Splash();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e.getClass() + ": "
+					+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
+			
+					 StringWriter sw = new StringWriter();  
+			         PrintWriter pw = new PrintWriter (sw);  
+			         e.printStackTrace (pw);  
 
-		main = new Main();
-		main.setVisible(true);
-		// new Splash();
+
+						JOptionPane.showMessageDialog(null, sw.toString(), "An error occurred", JOptionPane.ERROR_MESSAGE);		         
+			         
+			         
+			         
+			         System.exit(1);
+		}
 
 	}
 
