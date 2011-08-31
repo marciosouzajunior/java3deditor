@@ -39,7 +39,7 @@ public class GenerateScript {
 		"* Developer: Márcio de Souza Júnior                   *\n" +
 		"* Email/MSN: marciosouzajunior@gmail.com              *\n" +
 		"* Site: java3deditor.com                              *\n" +		
-		"* Version of Java 3D: 1.5.3                           *\n" + 
+		"* Version of Java 3D: 1.5.1                           *\n" + 
 		"*******************************************************/\n\n";
 	
 	
@@ -372,10 +372,12 @@ public class GenerateScript {
 				JOptionPane.showMessageDialog(null, "Script generated successfully.", "Generate Script", JOptionPane.INFORMATION_MESSAGE);
 				
 			} catch(Exception e){   
-				JOptionPane.showMessageDialog(null, "An error occurred.", "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, e.getClass() + ": "
+						+ e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 			}
 		}catch(Exception ex){
-			JOptionPane.showMessageDialog(null, "An error occurred.", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, ex.getClass() + ": "
+					+ ex.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
 		}
 	
 	} 
