@@ -23,7 +23,7 @@ public class Save {
 
 			ObjectOutputStream fileObjects = new ObjectOutputStream(file);
 
-			Enumeration e = World3D.getSceneRoot().getAllChildren();
+			Enumeration<?> e = World3D.getSceneRoot().getAllChildren();
 
 			while (e.hasMoreElements()) {
 
