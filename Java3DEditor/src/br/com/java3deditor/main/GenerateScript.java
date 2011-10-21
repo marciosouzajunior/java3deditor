@@ -483,7 +483,8 @@ public class GenerateScript {
 	 * 
 	 * @param word	String to be converted
 	 */
-    private static String fcase( String word ) {
+    @SuppressWarnings("unused")
+	private static String fcase( final String word ) {
     	
         if( word != null ) {
             int len = word.length();
