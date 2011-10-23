@@ -16,19 +16,19 @@ public class VSphere extends Sphere implements Serializable {
 
 	public String nome = "";
 
-	public VSphere(float raio, Appearance aparencia, String Nome) {
+	public VSphere(float raio, Appearance aparencia, String Name) {
 
 		super(raio, Sphere.GENERATE_TEXTURE_COORDS, aparencia);
-		nome = Nome;
+		nome = Name;
 
 	}
 
-	public String getNome() {
+	public String getName() {
 		return nome;
 	}
 
-	public void setNome(String newNome) {
-		nome = newNome;
+	public void setNome(String newName) {
+		nome = newName;
 	}
 
 }

@@ -51,7 +51,7 @@ public class Pantenon {
 		//
 
 		// TransformGroup
- 		TransformGroup trgcube6  = new TransformGroup ();
+ 		TransformGroup trgcube6 = new TransformGroup();
 		trgcube6.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 
 		// Appearance

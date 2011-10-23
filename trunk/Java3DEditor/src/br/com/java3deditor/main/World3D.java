@@ -777,7 +777,7 @@ public class World3D extends JInternalFrame {
 		brg.setCapability(BranchGroup.ALLOW_DETACH);
 		brg.addChild(mr);
 
-		// adiciona o branch no trg do mundo3d
+		// Add BranchGroup in TransformGroup of object
 		((TransformGroup) ((Node) ((PickResult) obj)
 				.getNode(PickResult.PRIMITIVE)).getParent()).addChild(brg);
 
