@@ -105,47 +105,47 @@ public class GenerateScript {
 				
 				this.code +=
 					"		//\n" +
-					"		// Object: " + ((VBox)(objects.get(index))).getNome() + index + "\n" +
+					"		// Object: " + ((VBox)(objects.get(index))).getName() + index + "\n" +
 					"		//\n\n" +
 					"		// TransformGroup\n " +
-					"		TransformGroup trg" + ((VBox)(objects.get(index))).getNome() + index + "  = new TransformGroup ();\n" + 
-					"		trg" + ((VBox)(objects.get(index))).getNome() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
+					"		TransformGroup trg" + ((VBox)(objects.get(index))).getName() + index + " = new TransformGroup();\n" + 
+					"		trg" + ((VBox)(objects.get(index))).getName() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
 					
 					"		// Appearance\n" +
-					"		Color3f cor" + ((VBox)(objects.get(index))).getNome() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
-					"		ColoringAttributes colorAttributes" + ((VBox)(objects.get(index))).getNome() + index + " = new ColoringAttributes();\n" +	
-					"		colorAttributes" + ((VBox)(objects.get(index))).getNome() + index + ".setColor(cor" + ((VBox)(objects.get(index))).getNome() + index + ");\n" + 
-					"		Appearance appearance" + ((VBox)(objects.get(index))).getNome() + index + " = new Appearance();\n"+ 
-					"		appearance" + ((VBox)(objects.get(index))).getNome() + index + ".setColoringAttributes(colorAttributes" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Color3f cor" + ((VBox)(objects.get(index))).getName() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
+					"		ColoringAttributes colorAttributes" + ((VBox)(objects.get(index))).getName() + index + " = new ColoringAttributes();\n" +	
+					"		colorAttributes" + ((VBox)(objects.get(index))).getName() + index + ".setColor(cor" + ((VBox)(objects.get(index))).getName() + index + ");\n" + 
+					"		Appearance appearance" + ((VBox)(objects.get(index))).getName() + index + " = new Appearance();\n"+ 
+					"		appearance" + ((VBox)(objects.get(index))).getName() + index + ".setColoringAttributes(colorAttributes" + ((VBox)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Declaration\n" +
-					"		Box " + ((VBox)(objects.get(index))).getNome() + index + " = new Box(" + ((VBox)(objects.get(index))).getXdimension() +	"f, " + ((VBox)(objects.get(index))).getYdimension() + "f," + ((VBox)(objects.get(index))).getZdimension() + "f, Box.GENERATE_TEXTURE_COORDS, appearance" + ((VBox)(objects.get(index))).getNome() + index + ");\n" +
-					"		trg" + ((VBox)(objects.get(index))).getNome() + index + ".addChild(" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n" + 
+					"		Box " + ((VBox)(objects.get(index))).getName() + index + " = new Box(" + ((VBox)(objects.get(index))).getXdimension() +	"f, " + ((VBox)(objects.get(index))).getYdimension() + "f," + ((VBox)(objects.get(index))).getZdimension() + "f, Box.GENERATE_TEXTURE_COORDS, appearance" + ((VBox)(objects.get(index))).getName() + index + ");\n" +
+					"		trg" + ((VBox)(objects.get(index))).getName() + index + ".addChild(" + ((VBox)(objects.get(index))).getName() + index + ");\n\n" + 
 					
 					"		// Position\n" +
-					"		Vector3d v3DPosition" + ((VBox)(objects.get(index))).getNome() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
-					"		Transform3D trfPosition" + ((VBox)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfPosition" + ((VBox)(objects.get(index))).getNome() + index + ".set(v3DPosition" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Vector3d v3DPosition" + ((VBox)(objects.get(index))).getName() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
+					"		Transform3D trfPosition" + ((VBox)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfPosition" + ((VBox)(objects.get(index))).getName() + index + ".set(v3DPosition" + ((VBox)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Scale\n" +
-					"		Vector3d v3DScale" + ((VBox)(objects.get(index))).getNome() + index + " = new Vector3d(" + scale.getX() + ", " + scale.getY() + ", " + scale.getZ()+");\n" + 
-					"		Transform3D trfScale" + ((VBox)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfScale" + ((VBox)(objects.get(index))).getNome() + index + ".setScale(v3DScale" + ((VBox)(objects.get(index))).getNome() + index + ");\n" +
-					"		trfScale" + ((VBox)(objects.get(index))).getNome() + index + ".mul(trfPosition" + ((VBox)(objects.get(index))).getNome() + index + "); // Accumulating\n" +
-					"		trg" + ((VBox)(objects.get(index))).getNome() + index + ".setTransform(trfScale" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n" +					
+					"		Vector3d v3DScale" + ((VBox)(objects.get(index))).getName() + index + " = new Vector3d(" + scale.getX() + ", " + scale.getY() + ", " + scale.getZ()+");\n" + 
+					"		Transform3D trfScale" + ((VBox)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfScale" + ((VBox)(objects.get(index))).getName() + index + ".setScale(v3DScale" + ((VBox)(objects.get(index))).getName() + index + ");\n" +
+					"		trfScale" + ((VBox)(objects.get(index))).getName() + index + ".mul(trfPosition" + ((VBox)(objects.get(index))).getName() + index + "); // Accumulating\n" +
+					"		trg" + ((VBox)(objects.get(index))).getName() + index + ".setTransform(trfScale" + ((VBox)(objects.get(index))).getName() + index + ");\n\n" +					
 					
 					"		// Rotation\n" +
-					"		Matrix3d m3DRotation" + ((VBox)(objects.get(index))).getNome() + index + " = new Matrix3d(" + 
+					"		Matrix3d m3DRotation" + ((VBox)(objects.get(index))).getName() + index + " = new Matrix3d(" + 
 																		rotation.getM00() + ", " + rotation.getM01() + ", " + rotation.getM02() + ",\n" +
 					"												" + rotation.getM10() + ", " + rotation.getM11() + ", " + rotation.getM12() + ",\n" +
 					"												" + rotation.getM20() + ", " + rotation.getM21() + ", " + rotation.getM22() + ");\n" +
-					"		trfPosition" + ((VBox)(objects.get(index))).getNome() + index + ".setRotation(m3DRotation" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trfPosition" + ((VBox)(objects.get(index))).getName() + index + ".setRotation(m3DRotation" + ((VBox)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Apply the transforms\n" +
-					"		trg" + ((VBox)(objects.get(index))).getNome() + index + ".setTransform(trfPosition" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trg" + ((VBox)(objects.get(index))).getName() + index + ".setTransform(trfPosition" + ((VBox)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Add to BranchGroup\n" +
-					"		brg.addChild(trg" + ((VBox)(objects.get(index))).getNome() + index + ");\n\n\n";
+					"		brg.addChild(trg" + ((VBox)(objects.get(index))).getName() + index + ");\n\n\n";
 			
 			} else if (objects.get(index) instanceof VCone){
 					
@@ -166,47 +166,47 @@ public class GenerateScript {
 				
 				this.code +=
 					"		//\n" +					
-					"		// Object: " + ((VCone)(objects.get(index))).getNome() + index + "\n" +
+					"		// Object: " + ((VCone)(objects.get(index))).getName() + index + "\n" +
 					"		//\n\n" +					
 					"		// TransformGroup\n " +
-					"		TransformGroup trg" + ((VCone)(objects.get(index))).getNome() + index + "  = new TransformGroup ();\n" + 
-					"		trg" + ((VCone)(objects.get(index))).getNome() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
+					"		TransformGroup trg" + ((VCone)(objects.get(index))).getName() + index + " = new TransformGroup();\n" + 
+					"		trg" + ((VCone)(objects.get(index))).getName() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
 					
 					"		// Appearance\n" +
-					"		Color3f cor" + ((VCone)(objects.get(index))).getNome() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
-					"		ColoringAttributes colorAttributes" + ((VCone)(objects.get(index))).getNome() + index + " = new ColoringAttributes();\n" +	
-					"		colorAttributes" + ((VCone)(objects.get(index))).getNome() + index + ".setColor(cor" + ((VCone)(objects.get(index))).getNome() + index + ");\n" + 
-					"		Appearance appearance" + ((VCone)(objects.get(index))).getNome() + index + " = new Appearance();\n"+ 
-					"		appearance" + ((VCone)(objects.get(index))).getNome() + index + ".setColoringAttributes(colorAttributes" + ((VCone)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Color3f cor" + ((VCone)(objects.get(index))).getName() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
+					"		ColoringAttributes colorAttributes" + ((VCone)(objects.get(index))).getName() + index + " = new ColoringAttributes();\n" +	
+					"		colorAttributes" + ((VCone)(objects.get(index))).getName() + index + ".setColor(cor" + ((VCone)(objects.get(index))).getName() + index + ");\n" + 
+					"		Appearance appearance" + ((VCone)(objects.get(index))).getName() + index + " = new Appearance();\n"+ 
+					"		appearance" + ((VCone)(objects.get(index))).getName() + index + ".setColoringAttributes(colorAttributes" + ((VCone)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Declaration\n" +
-					"		Cone " + ((VCone)(objects.get(index))).getNome() + index + " = new Cone(" + ((VCone)(objects.get(index))).getRadius() +	"f, " + ((VCone)(objects.get(index))).getHeight() +	"f, Cone.GENERATE_TEXTURE_COORDS, appearance" + ((VCone)(objects.get(index))).getNome() + index + ");\n" +
-					"		trg" + ((VCone)(objects.get(index))).getNome() + index + ".addChild(" + ((VCone)(objects.get(index))).getNome() + index + ");\n\n" + 
+					"		Cone " + ((VCone)(objects.get(index))).getName() + index + " = new Cone(" + ((VCone)(objects.get(index))).getRadius() +	"f, " + ((VCone)(objects.get(index))).getHeight() +	"f, Cone.GENERATE_TEXTURE_COORDS, appearance" + ((VCone)(objects.get(index))).getName() + index + ");\n" +
+					"		trg" + ((VCone)(objects.get(index))).getName() + index + ".addChild(" + ((VCone)(objects.get(index))).getName() + index + ");\n\n" + 
 					
 					"		// Position\n" +
-					"		Vector3d v3DPosition" + ((VCone)(objects.get(index))).getNome() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
-					"		Transform3D trfPosition" + ((VCone)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfPosition" + ((VCone)(objects.get(index))).getNome() + index + ".set(v3DPosition" + ((VCone)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Vector3d v3DPosition" + ((VCone)(objects.get(index))).getName() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
+					"		Transform3D trfPosition" + ((VCone)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfPosition" + ((VCone)(objects.get(index))).getName() + index + ".set(v3DPosition" + ((VCone)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Scale\n" +
-					"		Vector3d v3DScale" + ((VCone)(objects.get(index))).getNome() + index + " = new Vector3d(" + scale.getX() + ", " + scale.getY() + ", " + scale.getZ()+");\n" + 
-					"		Transform3D trfScale" + ((VCone)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfScale" + ((VCone)(objects.get(index))).getNome() + index + ".setScale(v3DScale" + ((VCone)(objects.get(index))).getNome() + index + ");\n" +
-					"		trfScale" + ((VCone)(objects.get(index))).getNome() + index + ".mul(trfPosition" + ((VCone)(objects.get(index))).getNome() + index + "); // Accumulating\n" +
-					"		trg" + ((VCone)(objects.get(index))).getNome() + index + ".setTransform(trfScale" + ((VCone)(objects.get(index))).getNome() + index + ");\n\n" +					
+					"		Vector3d v3DScale" + ((VCone)(objects.get(index))).getName() + index + " = new Vector3d(" + scale.getX() + ", " + scale.getY() + ", " + scale.getZ()+");\n" + 
+					"		Transform3D trfScale" + ((VCone)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfScale" + ((VCone)(objects.get(index))).getName() + index + ".setScale(v3DScale" + ((VCone)(objects.get(index))).getName() + index + ");\n" +
+					"		trfScale" + ((VCone)(objects.get(index))).getName() + index + ".mul(trfPosition" + ((VCone)(objects.get(index))).getName() + index + "); // Accumulating\n" +
+					"		trg" + ((VCone)(objects.get(index))).getName() + index + ".setTransform(trfScale" + ((VCone)(objects.get(index))).getName() + index + ");\n\n" +					
 
 					"		// Rotation\n" +
-					"		Matrix3d m3DRotation" + ((VCone)(objects.get(index))).getNome() + index + " = new Matrix3d(" +
+					"		Matrix3d m3DRotation" + ((VCone)(objects.get(index))).getName() + index + " = new Matrix3d(" +
 																		rotation.getM00() + ", " + rotation.getM01() + ", " + rotation.getM02() + ",\n" +
 					"												" + rotation.getM10() + ", " + rotation.getM11() + ", " + rotation.getM12() + ",\n" +
 					"												" + rotation.getM20() + ", " + rotation.getM21() + ", " + rotation.getM22() + ");\n" +
-					"		trfPosition" + ((VCone)(objects.get(index))).getNome() + index + ".setRotation(m3DRotation" + ((VCone)(objects.get(index))).getNome() + index + ");\n" +
+					"		trfPosition" + ((VCone)(objects.get(index))).getName() + index + ".setRotation(m3DRotation" + ((VCone)(objects.get(index))).getName() + index + ");\n" +
 
 					"		// Apply the transforms\n" +
-					"		trg" + ((VCone)(objects.get(index))).getNome() + index + ".setTransform(trfPosition" + ((VCone)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trg" + ((VCone)(objects.get(index))).getName() + index + ".setTransform(trfPosition" + ((VCone)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Add to BranchGroup\n" +
-					"		brg.addChild(trg" + ((VCone)(objects.get(index))).getNome() + index + ");\n\n\n";
+					"		brg.addChild(trg" + ((VCone)(objects.get(index))).getName() + index + ");\n\n\n";
 						
 				
 			}else if (objects.get(index) instanceof VCylinder){
@@ -228,47 +228,47 @@ public class GenerateScript {
 				
 				this.code +=
 					"		//\n" +					
-					"		// Object: " + ((VCylinder)(objects.get(index))).getNome() + index + "\n" +
+					"		// Object: " + ((VCylinder)(objects.get(index))).getName() + index + "\n" +
 					"		//\n\n" +					
 					"		// TransformGroup\n " +
-					"		TransformGroup trg" + ((VCylinder)(objects.get(index))).getNome() + index + "  = new TransformGroup ();\n" + 
-					"		trg" + ((VCylinder)(objects.get(index))).getNome() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
+					"		TransformGroup trg" + ((VCylinder)(objects.get(index))).getName() + index + " = new TransformGroup();\n" + 
+					"		trg" + ((VCylinder)(objects.get(index))).getName() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
 					
 					"		// Appearance\n" +
-					"		Color3f cor" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
-					"		ColoringAttributes colorAttributes" + ((VCylinder)(objects.get(index))).getNome() + index + " = new ColoringAttributes();\n" +	
-					"		colorAttributes" + ((VCylinder)(objects.get(index))).getNome() + index + ".setColor(cor" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n" + 
-					"		Appearance appearance" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Appearance();\n"+ 
-					"		appearance" + ((VCylinder)(objects.get(index))).getNome() + index + ".setColoringAttributes(colorAttributes" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Color3f cor" + ((VCylinder)(objects.get(index))).getName() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
+					"		ColoringAttributes colorAttributes" + ((VCylinder)(objects.get(index))).getName() + index + " = new ColoringAttributes();\n" +	
+					"		colorAttributes" + ((VCylinder)(objects.get(index))).getName() + index + ".setColor(cor" + ((VCylinder)(objects.get(index))).getName() + index + ");\n" + 
+					"		Appearance appearance" + ((VCylinder)(objects.get(index))).getName() + index + " = new Appearance();\n"+ 
+					"		appearance" + ((VCylinder)(objects.get(index))).getName() + index + ".setColoringAttributes(colorAttributes" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Declaration\n" +
-					"		Cylinder " + ((VCylinder)(objects.get(index))).getNome() + index + " = new Cylinder("+((VCylinder)(objects.get(index))).getRadius() + "f, " + ((VCylinder)(objects.get(index))).getHeight() + "f, Cylinder.GENERATE_TEXTURE_COORDS, appearance" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n" +
-					"		trg" + ((VCylinder)(objects.get(index))).getNome() + index + ".addChild(" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n" + 
+					"		Cylinder " + ((VCylinder)(objects.get(index))).getName() + index + " = new Cylinder("+((VCylinder)(objects.get(index))).getRadius() + "f, " + ((VCylinder)(objects.get(index))).getHeight() + "f, Cylinder.GENERATE_TEXTURE_COORDS, appearance" + ((VCylinder)(objects.get(index))).getName() + index + ");\n" +
+					"		trg" + ((VCylinder)(objects.get(index))).getName() + index + ".addChild(" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n" + 
 					
 					"		// Position\n" +
-					"		Vector3d v3DPosition" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
-					"		Transform3D trfPosition" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfPosition" + ((VCylinder)(objects.get(index))).getNome() + index + ".set(v3DPosition" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Vector3d v3DPosition" + ((VCylinder)(objects.get(index))).getName() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
+					"		Transform3D trfPosition" + ((VCylinder)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfPosition" + ((VCylinder)(objects.get(index))).getName() + index + ".set(v3DPosition" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Scale\n" +
-					"		Vector3d v3DScale" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Vector3d(" + scale.getX() + ", " + scale.getY() + ", " + scale.getZ()+");\n" + 
-					"		Transform3D trfScale" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfScale" + ((VCylinder)(objects.get(index))).getNome() + index + ".setScale(v3DScale" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n" +
-					"		trfScale" + ((VCylinder)(objects.get(index))).getNome() + index + ".mul(trfPosition" + ((VCylinder)(objects.get(index))).getNome() + index + "); // Accumulating\n" +
-					"		trg" + ((VCylinder)(objects.get(index))).getNome() + index + ".setTransform(trfScale" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n" +					
+					"		Vector3d v3DScale" + ((VCylinder)(objects.get(index))).getName() + index + " = new Vector3d(" + scale.getX() + ", " + scale.getY() + ", " + scale.getZ()+");\n" + 
+					"		Transform3D trfScale" + ((VCylinder)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfScale" + ((VCylinder)(objects.get(index))).getName() + index + ".setScale(v3DScale" + ((VCylinder)(objects.get(index))).getName() + index + ");\n" +
+					"		trfScale" + ((VCylinder)(objects.get(index))).getName() + index + ".mul(trfPosition" + ((VCylinder)(objects.get(index))).getName() + index + "); // Accumulating\n" +
+					"		trg" + ((VCylinder)(objects.get(index))).getName() + index + ".setTransform(trfScale" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n" +					
 					
 					"		// Rotation\n" +
-					"		Matrix3d m3DRotation" + ((VCylinder)(objects.get(index))).getNome() + index + " = new Matrix3d(" +
+					"		Matrix3d m3DRotation" + ((VCylinder)(objects.get(index))).getName() + index + " = new Matrix3d(" +
 																		rotation.getM00() + ", " + rotation.getM01() + ", " + rotation.getM02() + ",\n" +
 					"												" + rotation.getM10() + ", " + rotation.getM11() + ", " + rotation.getM12() + ",\n" +
 					"												" + rotation.getM20() + ", " + rotation.getM21() + ", " + rotation.getM22() + ");\n" +
-					"		trfPosition" + ((VCylinder)(objects.get(index))).getNome() + index + ".setRotation(m3DRotation" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trfPosition" + ((VCylinder)(objects.get(index))).getName() + index + ".setRotation(m3DRotation" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Apply the transforms\n" +
-					"		trg" + ((VCylinder)(objects.get(index))).getNome() + index + ".setTransform(trfPosition" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trg" + ((VCylinder)(objects.get(index))).getName() + index + ".setTransform(trfPosition" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Add to BranchGroup\n" +
-					"		brg.addChild(trg" + ((VCylinder)(objects.get(index))).getNome() + index + ");\n\n\n";
+					"		brg.addChild(trg" + ((VCylinder)(objects.get(index))).getName() + index + ");\n\n\n";
 				
 			}else if (objects.get(index) instanceof VSphere){
 				
@@ -289,47 +289,47 @@ public class GenerateScript {
 				
 				this.code +=
 					"		//\n" +					
-					"		// Object: " + ((VSphere)(objects.get(index))).getNome() + index + "\n" +
+					"		// Object: " + ((VSphere)(objects.get(index))).getName() + index + "\n" +
 					"		//\n\n" +					
 					"		// TransformGroup\n " +
-					"		TransformGroup trg" + ((VSphere)(objects.get(index))).getNome() + index + "  = new TransformGroup ();\n" + 
-					"		trg" + ((VSphere)(objects.get(index))).getNome() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
+					"		TransformGroup trg" + ((VSphere)(objects.get(index))).getName() + index + " = new TransformGroup();\n" + 
+					"		trg" + ((VSphere)(objects.get(index))).getName() + index + ".setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);\n\n" +
 					
 					"		// Appearance\n" +
-					"		Color3f cor" + ((VSphere)(objects.get(index))).getNome() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
-					"		ColoringAttributes colorAttributes" + ((VSphere)(objects.get(index))).getNome() + index + " = new ColoringAttributes();\n" +	
-					"		colorAttributes" + ((VSphere)(objects.get(index))).getNome() + index + ".setColor(cor" + ((VSphere)(objects.get(index))).getNome() + index + ");\n" + 
-					"		Appearance appearance" + ((VSphere)(objects.get(index))).getNome() + index + " = new Appearance();\n"+ 
-					"		appearance" + ((VSphere)(objects.get(index))).getNome() + index + ".setColoringAttributes(colorAttributes" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Color3f cor" + ((VSphere)(objects.get(index))).getName() + index + " = new Color3f(" + cor.getX() + "f, " + cor.getY() + "f, " + cor.getZ() + "f);\n" + 
+					"		ColoringAttributes colorAttributes" + ((VSphere)(objects.get(index))).getName() + index + " = new ColoringAttributes();\n" +	
+					"		colorAttributes" + ((VSphere)(objects.get(index))).getName() + index + ".setColor(cor" + ((VSphere)(objects.get(index))).getName() + index + ");\n" + 
+					"		Appearance appearance" + ((VSphere)(objects.get(index))).getName() + index + " = new Appearance();\n"+ 
+					"		appearance" + ((VSphere)(objects.get(index))).getName() + index + ".setColoringAttributes(colorAttributes" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Declaration\n" +
-					"		Sphere " + ((VSphere)(objects.get(index))).getNome() + index + " = new Sphere("+((VSphere)(objects.get(index))).getRadius() + "f, Sphere.GENERATE_TEXTURE_COORDS, appearance" + ((VSphere)(objects.get(index))).getNome() + index + ");\n" +
-					"		trg" + ((VSphere)(objects.get(index))).getNome() + index + ".addChild(" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n" + 
+					"		Sphere " + ((VSphere)(objects.get(index))).getName() + index + " = new Sphere("+((VSphere)(objects.get(index))).getRadius() + "f, Sphere.GENERATE_TEXTURE_COORDS, appearance" + ((VSphere)(objects.get(index))).getName() + index + ");\n" +
+					"		trg" + ((VSphere)(objects.get(index))).getName() + index + ".addChild(" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n" + 
 					
 					"		// Position\n" +
-					"		Vector3d v3DPosition" + ((VSphere)(objects.get(index))).getNome() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
-					"		Transform3D trfPosition" + ((VSphere)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfPosition" + ((VSphere)(objects.get(index))).getNome() + index + ".set(v3DPosition" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		Vector3d v3DPosition" + ((VSphere)(objects.get(index))).getName() + index + " = new Vector3d(" + position.getX() + ", " + position.getY() + ", " + position.getZ()+");\n" + 
+					"		Transform3D trfPosition" + ((VSphere)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfPosition" + ((VSphere)(objects.get(index))).getName() + index + ".set(v3DPosition" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Scale\n" +
-					"		Vector3d v3DScale" + ((VSphere)(objects.get(index))).getNome() + index + " = new Vector3d(" + scale.getX() + ","+ scale.getY() +","+ scale.getZ()+");\n" + 
-					"		Transform3D trfScale" + ((VSphere)(objects.get(index))).getNome() + index + " = new Transform3D();\n" +
-					"		trfScale" + ((VSphere)(objects.get(index))).getNome() + index + ".setScale(v3DScale" + ((VSphere)(objects.get(index))).getNome() + index + ");\n" +
-					"		trfScale" + ((VSphere)(objects.get(index))).getNome() + index + ".mul(trfPosition" + ((VSphere)(objects.get(index))).getNome() + index + "); // Accumulating\n" +
-					"		trg" + ((VSphere)(objects.get(index))).getNome() + index + ".setTransform(trfScale" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n" +					
+					"		Vector3d v3DScale" + ((VSphere)(objects.get(index))).getName() + index + " = new Vector3d(" + scale.getX() + ","+ scale.getY() +","+ scale.getZ()+");\n" + 
+					"		Transform3D trfScale" + ((VSphere)(objects.get(index))).getName() + index + " = new Transform3D();\n" +
+					"		trfScale" + ((VSphere)(objects.get(index))).getName() + index + ".setScale(v3DScale" + ((VSphere)(objects.get(index))).getName() + index + ");\n" +
+					"		trfScale" + ((VSphere)(objects.get(index))).getName() + index + ".mul(trfPosition" + ((VSphere)(objects.get(index))).getName() + index + "); // Accumulating\n" +
+					"		trg" + ((VSphere)(objects.get(index))).getName() + index + ".setTransform(trfScale" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n" +					
 					
 					"		// Rotation\n" +
-					"		Matrix3d m3DRotation" + ((VSphere)(objects.get(index))).getNome() + index + " = new Matrix3d(" +
+					"		Matrix3d m3DRotation" + ((VSphere)(objects.get(index))).getName() + index + " = new Matrix3d(" +
 																		rotation.getM00() + ", " + rotation.getM01() + ", " + rotation.getM02() + ",\n" +
 					"												" + rotation.getM10() + ", " + rotation.getM11() + ", " + rotation.getM12() + ",\n" +
 					"												" + rotation.getM20() + ", " + rotation.getM21() + ", " + rotation.getM22() + ");\n" +
-					"		trfPosition" + ((VSphere)(objects.get(index))).getNome() + index + ".setRotation(m3DRotation" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trfPosition" + ((VSphere)(objects.get(index))).getName() + index + ".setRotation(m3DRotation" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Apply the transforms\n" +
-					"		trg" + ((VSphere)(objects.get(index))).getNome() + index + ".setTransform(trfPosition" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n" +
+					"		trg" + ((VSphere)(objects.get(index))).getName() + index + ".setTransform(trfPosition" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n" +
 					
 					"		// Add to BranchGroup\n" +
-					"		brg.addChild(trg" + ((VSphere)(objects.get(index))).getNome() + index + ");\n\n\n";
+					"		brg.addChild(trg" + ((VSphere)(objects.get(index))).getName() + index + ");\n\n\n";
 			}
 					
 			index++;
@@ -337,7 +337,7 @@ public class GenerateScript {
 		};
 		
 		this.generateFinalCode();
-		this.Save(this.code);
+		this.save(this.code);
 	}
 	
 	
@@ -347,7 +347,7 @@ public class GenerateScript {
 	 * @param code	String containing all the generated code
 	 */
 	
-	public void Save(String code){  
+	public void save(String code){  
 		      
 		try
 		{

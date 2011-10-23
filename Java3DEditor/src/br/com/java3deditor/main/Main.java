@@ -509,7 +509,7 @@ public class Main extends JFrame {
 				scene.addBox(((VBox) primitive).getXdimension(),
 						((VBox) primitive).getYdimension(), ((VBox) primitive)
 								.getZdimension(), color, ((VBox) primitive)
-								.getNome(), trgTemp);
+								.getName(), trgTemp);
 
 			} else if (primitive instanceof Sphere) {
 
@@ -548,7 +548,7 @@ public class Main extends JFrame {
 				trgTemp.setTransform(trf);
 
 				scene.addSphere(((VSphere) primitive).getRadius(), color,
-						((VSphere) primitive).getNome(), trgTemp);
+						((VSphere) primitive).getName(), trgTemp);
 
 			} else if (primitive instanceof Cone) {
 
@@ -588,7 +588,7 @@ public class Main extends JFrame {
 
 				scene.addCone(((VCone) primitive).getRadius(),
 						((VCone) primitive).getHeight(), color,
-						((VCone) primitive).getNome(), trgTemp);
+						((VCone) primitive).getName(), trgTemp);
 
 			} else if (primitive instanceof Cylinder) {
 
@@ -628,7 +628,7 @@ public class Main extends JFrame {
 
 				scene.addCylinder(((VCylinder) primitive).getRadius(),
 						((VCylinder) primitive).getHeight(), color,
-						((VCylinder) primitive).getNome(), trgTemp);
+						((VCylinder) primitive).getName(), trgTemp);
 			}
 
 		} else {

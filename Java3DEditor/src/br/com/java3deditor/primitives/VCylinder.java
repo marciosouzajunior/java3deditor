@@ -16,18 +16,18 @@ public class VCylinder extends Cylinder implements Serializable {
 
 	public String nome = "";
 
-	public VCylinder(float raio, float altura, Appearance aparencia, String Nome) {
+	public VCylinder(float raio, float altura, Appearance aparencia, String Name) {
 
 		super(raio, altura, Cylinder.GENERATE_TEXTURE_COORDS, aparencia);
-		nome = Nome;
+		nome = Name;
 
 	}
 
-	public String getNome() {
+	public String getName() {
 		return nome;
 	}
 
-	public void setNome(String newNome) {
+	public void setName(String newNome) {
 		nome = newNome;
 	}
 

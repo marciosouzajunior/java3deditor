@@ -23,11 +23,11 @@ public class VBox extends Box implements Serializable {
 
 	}
 
-	public String getNome() {
+	public String getName() {
 		return name;
 	}
 
-	public void setNome(String newNome) {
+	public void setName(String newNome) {
 		name = newNome;
 	}
 
