@@ -1,0 +1,1 @@
+A Java 3D graphics tool that can be used to implement graphics applications for various purposes. Provides the user interface in which a three-dimensional objects can be manipulated with ease. The application also allows you to generate code from the scene in the Java language automatically, so that objects can be created and used to run graphical applications later.
